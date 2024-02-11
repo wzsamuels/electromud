@@ -1,6 +1,6 @@
 import React from "react"
 
-const PreferenceWindow = () => {
+const SettingsWindow = () => {
   return (
     <div>
       Color Theme <input type="radio"></input>
@@ -8,4 +8,4 @@ const PreferenceWindow = () => {
   )
 }
 
-export default PreferenceWindow
+export default SettingsWindow
