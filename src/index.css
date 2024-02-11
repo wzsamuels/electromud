@@ -4,6 +4,12 @@
 
 body {
   font-family: "DejaVu Mono", 'Courier New', Courier, monospace;
+  height: 100vh;
+}
+
+a {
+  color: lightskyblue;
+  text-decoration-line: underline;
 }
 
 /* dejavu-mono-latin-400-normal */
