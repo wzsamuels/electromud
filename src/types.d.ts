@@ -3,3 +3,23 @@
 // whether you're running in development or production).
 declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
 declare const MAIN_WINDOW_VITE_NAME: string;
+
+interface onReadClientType { (text: string): void}
+
+export interface IElectronAPI {
+  writeClient: (data: string) => Promise<void>,
+  onReadClient: (arg0: onReadClientType) => void
+  connectClient: () => void
+}
+
+declare global {
+  interface Window {
+    electronAPI: IElectronAPI
+  }
+}
+
+export interface Line {
+  text: string; // The rest of the text
+  channelName?: string; // Optional channel name if present
+  color: string; // Color is now just for the channel name
+}
